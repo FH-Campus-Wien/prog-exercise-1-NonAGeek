@@ -7,7 +7,7 @@ public class App {
     //todo Task 1
     public void sayHelloWorld()
     {
-        System.out.println("Hello World");
+        System.out.println("Hello World!");
     }
 
     //todo Task 2
@@ -57,63 +57,51 @@ public class App {
     //todo Task 5
     public void swapTwoNumbers(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("before swap");
-        System.out.println("x: ");
+        System.out.println("Before Swap:");
+        System.out.print("x: ");
         int NrOne = scan.nextInt();
-        System.out.println("y: ");
+        System.out.print("y: ");
         int NrTwo = scan.nextInt();
-        System.out.println("aftar swap");
-        System.out.println("x: " + NrOne);
-        System.out.println("y: " + NrTwo);
+        System.out.println("After Swap:");
+        System.out.println("x: " + NrTwo);
+        System.out.println("y: " + NrOne);
     }
 
     //todo Task 6
     public void compareTwoNumbers(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("n1 =");
+        System.out.print("n1: ");
         int n1 = scan.nextInt();
-        System.out.println("n2 =");
+        System.out.print("n2: ");
         int n2 = scan.nextInt();
 
-        if (n1 > n2)
-        {
+        if (n1 > n2) {
             System.out.println("n1 > n2");
-        }
-        if (n2 > n1)
-        {
+        } else if (n2 > n1) {
             System.out.println("n2 > n1");
+        } else {
+            System.out.println("n1 == n2");
         }
-        if (n1 == n2)
-        {
-            System.out.println("n1 = n2");
-        }
+
 
     }
 
     //todo Task 7
     public void ratingSalesPerson(){
-        Scanner scann = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter annual Revenue: ");
+        int annualRevenue = scan.nextInt();
 
-        System.out.println("Enter annual Revenue: ");
-        int annualRevenue = scann.nextInt();
-        if ((annualRevenue < 0) ^ (annualRevenue >= 100000))
-        {
+
+        if ((annualRevenue < 0) || (annualRevenue >= 100000)) {
             System.out.println("Invalid Revenue");
-        }
-        if ((0 <= annualRevenue ) && (annualRevenue < 20000 ))
-        {
+        } else if ((0 <= annualRevenue) && (annualRevenue < 20000)) {
             System.out.println("Poor Sales Revenue");
-        }
-        if ((20000 <= annualRevenue) && (annualRevenue < 50000))
-        {
+        } else if ((20000 <= annualRevenue) && (annualRevenue < 50000)) {
             System.out.println("Average Sales Revenue");
-        }
-        if ((50000 <= annualRevenue) && (annualRevenue < 80000))
-        {
+        } else if ((50000 <= annualRevenue) && (annualRevenue < 80000)) {
             System.out.println("Good Sales Revenue");
-        }
-        if ((80000 <= annualRevenue) && (annualRevenue < 100000))
-        {
+        } else if ((80000 <= annualRevenue) && (annualRevenue < 100000)) {
             System.out.println("Excellent Sales Revenue");
         }
     }
@@ -121,49 +109,45 @@ public class App {
     //todo Task 8
     public void getCommissionRate(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter CommissionClass");
-        int commsionclass = scan.nextInt();
-        switch (commsionclass)
-        {
+        System.out.print("Enter CommissionClass: ");
+        int ComissionRate = scan.nextInt();
+
+        switch (ComissionRate) {
             case 1:
-                commsionclass = 1;
+                ComissionRate = 1;
                 System.out.println("Your Commission Rate was set to 0.01");
                 break;
             case 2:
-                commsionclass = 2;
+                ComissionRate = 2;
                 System.out.println("Your Commission Rate was set to 0.02");
                 break;
             case 3:
-                commsionclass = 3;
+                ComissionRate = 3;
                 System.out.println("Your Commission Rate was set to 0.03");
                 break;
             case 4:
-                commsionclass = 4;
+                ComissionRate = 4;
                 System.out.println("Your Commission Rate was set to 0.04");
                 break;
             default:
-                System.out.println("Your Commission Rate was set to 0.00");
+                System.out.println("Your Commission Rate was set to 0.0");
+                break;
         }
     }
 
     //todo Task 9
     public void leapyear(){
         Scanner scan = new Scanner(System.in);
-        int Year = scan.nextInt();
-        if (Year % 4 !=0)
-        {
+        System.out.print("Year: ");
+        int year = scan.nextInt();
+
+        if (year % 4 != 0) {
             System.out.println("Not a Leapyear");
-        }
-        else if (Year % 100 !=0 )
-        {
+        } else if (year % 100 != 0) {
             System.out.println("Leapyear");
-        }
-        else if (Year % 400 ==0)
-        {
+        } else if (year % 400 == 0) {
             System.out.println("Leapyear");
-        }
-        else
-        {
+        } else {
             System.out.println("Not a Leapyear");
         }
     }
